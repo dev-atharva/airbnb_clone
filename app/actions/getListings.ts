@@ -13,14 +13,14 @@ export interface IlistingParams {
 export default async function getListings(params: IlistingParams) {
   try {
     const {
-      userId,
-      guestCount,
-      roomCount,
-      bathroomCount,
-      startDate,
-      endDate,
-      locationValue,
-      category,
+      userId="",
+      guestCount=0,
+      roomCount=0,
+      bathroomCount=0,
+      startDate="",
+      endDate="",
+      locationValue="",
+      category="",
     } = params;
     let query: any = {};
     if (userId) {
